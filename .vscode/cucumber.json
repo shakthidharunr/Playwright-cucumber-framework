@@ -1,0 +1,9 @@
+{
+  "steps": [
+    "src/steps/**/*.ts"
+  ],
+  "requireModules": [
+    "ts-node/register"
+  ],
+  "guessSteps": true
+}

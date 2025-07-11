@@ -1,0 +1,13 @@
+{
+  "cucumber.features": [
+    "features/**/*.feature"
+  ],
+  "cucumber.glue": [
+    "src/steps/**/*.ts"
+  ],
+  "cucumber.parameterTypes": [],
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "explorer.confirmDelete": false,
+  "playwright.reuseBrowser": false,
+  "workbench.colorTheme": "GitHub Dark"
+}

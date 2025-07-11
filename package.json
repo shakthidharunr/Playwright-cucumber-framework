@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  "test": "cucumber-js --require-module ts-node/register --require src/**/*.ts features"
-},
+"scripts": {
+  "test": "cucumber-js --require-module ts-node/register --require src/steps/**/*.steps.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -1,12 +1,12 @@
 import { BeforeAll, AfterAll, After } from '@cucumber/cucumber';
-import { chromium } from 'playwright';
+import BrowserManager from '../utils/BrowserManager';
 
 BeforeAll(async () => {
-  global.browserInstance = await chromium.launch({ headless: false }); // set true for CI
+  await BrowserManager.getBrowser();
 });
 
 AfterAll(async () => {
-  await global.browserInstance?.close();
+  await BrowserManager.closeBrowser();
 });
 
 After(async function () {

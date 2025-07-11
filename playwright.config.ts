@@ -1,8 +1,24 @@
 import { defineConfig } from '@playwright/test';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 export default defineConfig({
-  testDir: './tests', // This is important
   use: {
-    headless: true,
+    trace: 'on',
+    video: 'retain-on-failure',
+    browserName: 'chromium',
   },
+  projects: [
+    {
+      name: 'BrowserStack-Chrome',
+      use: {
+        browserName: 'chromium',
+        channel: 'chrome',
+      },
+    },
+  ],
+  reporter: [['list']],
+  workers: 1,
+  retries: 1,
 });
