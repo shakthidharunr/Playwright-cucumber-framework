@@ -1,0 +1,231 @@
+2025-07-12 07:57:41 - [32minfo[39m: Reading configs from C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\browserstack.yml
+2025-07-12 07:57:41 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 07:57:41 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 07:57:41 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 07:57:41 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 07:57:41 - [32minfo[39m: SDK run started with id: 7899e8e5-c66b-45aa-9feb-8c9834b74343
+2025-07-12 07:57:41 - [32minfo[39m: SDK run started with id: 7899e8e5-c66b-45aa-9feb-8c9834b74343
+2025-07-12 07:57:41 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 07:57:41 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 07:57:44 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 07:57:44 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 08:00:37 - [32minfo[39m: Reading configs from C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\browserstack.yml
+2025-07-12 08:00:37 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 08:00:37 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 08:00:37 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 08:00:37 - [32minfo[39m: SDK run started with id: 405b204e-b8c1-42f2-b381-2b22783a723f
+2025-07-12 08:00:37 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 08:00:37 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 08:00:37 - [32minfo[39m: SDK run started with id: 405b204e-b8c1-42f2-b381-2b22783a723f
+2025-07-12 08:00:37 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 08:00:40 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 08:00:40 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 08:03:01 - [32minfo[39m: Reading configs from C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\browserstack.yml
+2025-07-12 08:03:01 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 08:03:01 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 08:03:01 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 08:03:01 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 08:03:01 - [32minfo[39m: SDK run started with id: 72fe5348-9d57-4059-a522-338af5e6d20f
+2025-07-12 08:03:01 - [32minfo[39m: SDK run started with id: 72fe5348-9d57-4059-a522-338af5e6d20f
+2025-07-12 08:03:01 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 08:03:01 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 08:03:03 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 08:03:03 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 08:05:57 - [32minfo[39m: Reading configs from C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\browserstack.yml
+2025-07-12 08:05:57 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 08:05:57 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 08:05:57 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 08:05:57 - [32minfo[39m: SDK run started with id: 70eb4cab-6485-4a6f-8eb4-d0aa8f38f365
+2025-07-12 08:05:57 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 08:05:57 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 08:05:57 - [32minfo[39m: SDK run started with id: 70eb4cab-6485-4a6f-8eb4-d0aa8f38f365
+2025-07-12 08:05:57 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 08:05:59 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 08:05:59 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 08:06:10 - [32minfo[39m: Reading configs from C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\browserstack.yml
+2025-07-12 08:06:10 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 08:06:10 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 08:06:10 - [32minfo[39m: SDK run started with id: 889bcbed-6bd3-4b95-a9b3-1267cbd3eadc
+2025-07-12 08:06:10 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 08:06:10 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 08:06:10 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 08:06:10 - [32minfo[39m: SDK run started with id: 889bcbed-6bd3-4b95-a9b3-1267cbd3eadc
+2025-07-12 08:06:10 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 08:06:11 - [31merror[39m: Size mismatch
+2025-07-12 08:06:11 - [31merror[39m: Size mismatch
+2025-07-12 08:06:11 - [31merror[39m: Size mismatch
+2025-07-12 08:06:11 - [31merror[39m: Size mismatch
+2025-07-12 08:06:11 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 08:06:11 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 08:11:09 - [32minfo[39m: Reading configs from C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\browserstack.yml
+2025-07-12 08:11:09 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 08:11:09 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 08:11:09 - [32minfo[39m: SDK run started with id: 81907fad-4954-4d04-a1fa-b97450b63f64
+2025-07-12 08:11:09 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 08:11:09 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 08:11:09 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 08:11:09 - [32minfo[39m: SDK run started with id: 81907fad-4954-4d04-a1fa-b97450b63f64
+2025-07-12 08:11:09 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 08:11:10 - [31merror[39m: Size mismatch
+2025-07-12 08:11:10 - [31merror[39m: Size mismatch
+2025-07-12 08:11:10 - [31merror[39m: Size mismatch
+2025-07-12 08:11:10 - [31merror[39m: Size mismatch
+2025-07-12 08:11:10 - [31merror[39m: already finalized or destroyed
+2025-07-12 08:11:10 - [31merror[39m: already finalized or destroyed
+2025-07-12 08:11:10 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 08:11:10 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 08:12:47 - [32minfo[39m: Reading configs from C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\browserstack.yml
+2025-07-12 08:12:47 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 08:12:47 - [32minfo[39m: Log Directory has been set to C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\log
+2025-07-12 08:12:47 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 08:12:47 - [32minfo[39m: SDK run started with id: cac232f3-085e-4ecb-9a77-007acb40c2af
+2025-07-12 08:12:47 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 08:12:47 - [32minfo[39m: Running SDK with args C:\Program Files\nodejs\node.exe C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features
+2025-07-12 08:12:47 - [32minfo[39m: SDK run started with id: cac232f3-085e-4ecb-9a77-007acb40c2af
+2025-07-12 08:12:47 - [31merror[39m: TypeError: Cannot read properties of null (reading 'split')
+    at exports.compareVersions (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\helper.js:1:159240)
+    at BrowserStackSetup.preInitialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:11584)
+    at BrowserStackSetup.initialize (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\helpers\BrowserStackSetup.js:1:13485)
+    at run (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\cucumber-js\command.js:2:8729)
+    at Object.IneSE (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1547)
+    at captureError (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:1732)
+    at Object.qYuVj (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9150)
+    at C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\browserstack-node-sdk\src\bin\runner.js:2:9450
+    at _.applyBuilderUpdateUsageAndParse (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7435)
+    at _.runCommand (C:\Users\ShakthiDharunR\Documents\GitHub\Playwright-cucumber-framework\node_modules\yargs\build\index.cjs:1:7078)
+2025-07-12 08:12:47 - [31merror[39m: Size mismatch
+2025-07-12 08:12:47 - [31merror[39m: Size mismatch
+2025-07-12 08:12:47 - [31merror[39m: Size mismatch
+2025-07-12 08:12:47 - [31merror[39m: Size mismatch
+2025-07-12 08:12:47 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop
+2025-07-12 08:12:47 - [32minfo[39m: [BrowserstackCLI] stop: CLI is not running, skipping stop

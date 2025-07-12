@@ -1,0 +1,16 @@
+userName: "shakthidharunr_hHoMIB"
+accessKey: "ipvhZJRsT9nw7zJkryr6"
+
+buildName: "playwright-cucumber-build"
+projectName: "playwright-cucumber-project"
+testObservability: true
+
+run_settings:
+  framework: "cucumber"
+  frameworkVersion: "11.3.0"    
+  envFile: .env
+  npm_dependencies:
+    ts-node: "^10.9.2"
+    typescript: "^5.8.3"
+    "@cucumber/cucumber": "^11.3.0"   
+    playwright: "^1.54.1"
