@@ -1,16 +1,20 @@
-userName: "shakthidharunr_hHoMIB"
-accessKey: "ipvhZJRsT9nw7zJkryr6"
-
-buildName: "playwright-cucumber-build"
-projectName: "playwright-cucumber-project"
+version: 1.0
+source: playwright-cucumber
+framework: cucumber
+buildName: "Playwright Cucumber Tests"
 testObservability: true
 
 run_settings:
-  framework: "cucumber"
-  frameworkVersion: "11.3.0"    
-  envFile: .env
+  cypress_config_file: ''
+  project_name: "Playwright-Cucumber-Framework"
+  build_name: "Regression Suite"
+  exclude: []
   npm_dependencies:
-    ts-node: "^10.9.2"
-    typescript: "^5.8.3"
-    "@cucumber/cucumber": "^11.3.0"   
-    playwright: "^1.54.1"
+    - "@cucumber/cucumber"
+    - "typescript"
+    - "ts-node"
+  test_runner_command: "npx cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/hook.ts --require src/pages/**/*.ts features"
+
+browserstack:
+  username: ${BROWSERSTACK_USERNAME}
+  access_key: ${BROWSERSTACK_ACCESS_KEY}

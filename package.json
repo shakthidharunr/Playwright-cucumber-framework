@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js",
+"clean": "find ./src -type f \\( -name '*.js' -o -name '*.js.map' \\) -delete",
     "test:local": "cross-env RUN_ENV=local cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features",
     "test:bs": "cross-env RUN_ENV=bs npx browserstack-node-sdk cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/hooks/**/*.ts --require src/support/**/*.ts features"
   },

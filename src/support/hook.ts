@@ -1,19 +1,24 @@
-import { Before, After } from '@cucumber/cucumber';
-import { chromium, Browser, BrowserContext, Page } from 'playwright';
+import { Before, After, setWorldConstructor, World } from '@cucumber/cucumber';
+import { Browser, Page, chromium } from 'playwright';
+import { HomePage } from '../pages/Homepage';
+import { DesignerPage } from '../pages/DesignerPage';
 
-let browser: Browser;
-let context: BrowserContext;
-// eslint-disable-next-line import/no-mutable-exports
-export let page: Page;
+class CustomWorld extends World {
+  browser!: Browser;
+  page!: Page;
+  homePage!: HomePage;
+}
 
-Before(async () => {
-  browser = await chromium.launch({ headless: false });
-  context = await browser.newContext();
-  page = await context.newPage();
+setWorldConstructor(CustomWorld);
+
+Before(async function () {
+  this.browser = await chromium.launch({ headless: false });
+  this.page = await this.browser.newPage();
+  this.homePage = new HomePage(this.page);
+  this.designerpage = new DesignerPage(this.page);
 });
 
-After(async () => {
-  await page.close();
-  await context.close();
-  await browser.close();
+After(async function () {
+  await this.page.close();
+  await this.browser.close();
 });
