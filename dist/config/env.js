@@ -33,35 +33,14 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-const cucumber_1 = require("@cucumber/cucumber");
-const playwright_1 = require("playwright");
-const DesignerPage_1 = require("../pages/DesignerPage");
-const Homepage_1 = require("../pages/Homepage");
+exports.config = void 0;
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
-class CustomWorld extends cucumber_1.World {
-    browser;
-    page;
-    homePage;
-    designerpage;
-}
-(0, cucumber_1.setWorldConstructor)(CustomWorld);
-(0, cucumber_1.Before)(async function () {
-    if (process.env.RUN_ENV === 'bs') {
-        // BrowserStack SDK will inject page automatically
-        this.page = global.page;
+exports.config = {
+    runEnv: process.env.RUN_ENV || 'local',
+    browserName: process.env.BROWSER_NAME || 'chromium',
+    browserStack: {
+        username: process.env.BROWSERSTACK_USERNAME,
+        accessKey: process.env.BROWSERSTACK_ACCESS_KEY,
     }
-    else {
-        this.browser = await playwright_1.chromium.launch({ headless: false });
-        this.page = await this.browser.newPage();
-    }
-    // Shared for both local and BS
-    this.homePage = new Homepage_1.HomePage(this.page);
-    this.designerpage = new DesignerPage_1.DesignerPage(this.page);
-});
-(0, cucumber_1.After)(async function () {
-    if (this.page)
-        await this.page.close();
-    if (this.browser)
-        await this.browser.close();
-});
+};

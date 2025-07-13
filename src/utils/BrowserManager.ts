@@ -1,5 +1,5 @@
 // src/utils/BrowserManager.ts
-import { Browser, chromium } from 'playwright';
+import { Browser, chromium, firefox, webkit, BrowserType } from 'playwright';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -7,13 +7,27 @@ dotenv.config();
 class BrowserManager {
   private static browser: Browser;
 
+  private static getBrowserType(): BrowserType {
+    const browserName = (process.env.BROWSER_NAME || 'chromium').toLowerCase();
+    switch (browserName) {
+      case 'firefox':
+        return firefox;
+      case 'webkit':
+        return webkit;
+      case 'chromium':
+      default:
+        return chromium;
+    }
+    
+  }
+
   static async getBrowser(): Promise<Browser> {
     if (!BrowserManager.browser) {
       const runEnv = process.env.RUN_ENV || 'local';
-
+      const browserType = this.getBrowserType();
       if (runEnv === 'bs') {
         const caps = {
-          browser: 'chrome',
+          browser: process.env.BROWSER_NAME || 'chrome', 
           os: 'osx',
           os_version: 'catalina',
           name: 'Playwright Test',
@@ -26,9 +40,10 @@ class BrowserManager {
           JSON.stringify(caps)
         )}`;
 
+      
         BrowserManager.browser = await chromium.connectOverCDP(wsEndpoint);
       } else {
-        BrowserManager.browser = await chromium.launch({ headless: false });
+        BrowserManager.browser = await browserType.launch({ headless: false });
       }
     }
 

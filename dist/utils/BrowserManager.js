@@ -39,12 +39,25 @@ const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 class BrowserManager {
     static browser;
+    static getBrowserType() {
+        const browserName = (process.env.BROWSER_NAME || 'chromium').toLowerCase();
+        switch (browserName) {
+            case 'firefox':
+                return playwright_1.firefox;
+            case 'webkit':
+                return playwright_1.webkit;
+            case 'chromium':
+            default:
+                return playwright_1.chromium;
+        }
+    }
     static async getBrowser() {
         if (!BrowserManager.browser) {
             const runEnv = process.env.RUN_ENV || 'local';
+            const browserType = this.getBrowserType();
             if (runEnv === 'bs') {
                 const caps = {
-                    browser: 'chrome',
+                    browser: process.env.BROWSER_NAME || 'chrome',
                     os: 'osx',
                     os_version: 'catalina',
                     name: 'Playwright Test',
@@ -56,7 +69,7 @@ class BrowserManager {
                 BrowserManager.browser = await playwright_1.chromium.connectOverCDP(wsEndpoint);
             }
             else {
-                BrowserManager.browser = await playwright_1.chromium.launch({ headless: false });
+                BrowserManager.browser = await browserType.launch({ headless: false });
             }
         }
         return BrowserManager.browser;
