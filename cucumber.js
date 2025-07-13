@@ -4,8 +4,17 @@ module.exports = {
       'src/steps/**/*.ts',
       'src/support/**/*.ts'
     ],
-       paths: ['features/**/*.feature'],  
+    paths: ['features/**/*.feature'],
     requireModule: ['ts-node/register'],
-    format: ['progress']
+    format: [
+      'cucumberjs-allure2-reporter',
+      'json:reports/cucumber-report.json',
+      'progress'
+    ],
+    formatOptions: {
+      'cucumberjs-allure2-reporter': {
+        resultDir: 'allure-results'
+      }
+    }
   }
 };
