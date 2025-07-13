@@ -20,7 +20,7 @@ export async function attachFailureScreenshot(page: Page, scenarioName: string):
 
 export async function stopAndAttachTrace(
   context: BrowserContext,
-  attach: any,
+  attach: (data: string | Buffer, mediaType: string) => void,
   scenarioName: string
 ): Promise<void> {
   if (process.env.ENABLE_TRACE !== 'true') return;
@@ -42,11 +42,7 @@ export async function stopAndAttachTrace(
   }
 }
 
-export async function attachVideo(
-  page: Page,
-  attach: any,
-  scenarioName: string
-): Promise<void> {
+export async function attachVideo(page: Page, attach: (data: string | Buffer, mediaType: string) => void, scenarioName: string): Promise<void> {
   if (process.env.ENABLE_VIDEO !== 'true') return;
 
   const video = page.video();
@@ -66,8 +62,8 @@ export async function attachVideo(
     try {
       fs.renameSync(originalPath, newPath);
       break;
-    } catch (err: any) {
-      if (err.code === 'EBUSY' || err.code === 'EPERM') {
+    } catch (err: unknown) {
+      if (err instanceof Error && 'code' in err && (err.code === 'EBUSY' || err.code === 'EPERM')) {
         await new Promise(res => setTimeout(res, 200));
       } else {
         throw err;

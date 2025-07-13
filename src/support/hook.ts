@@ -61,12 +61,14 @@ AfterStep(async function ({ pickle, result }) {
 After(async function ({ pickle }) {
   const scenarioName = pickle.name;
 
+  const attachFn = this.attach.bind(this) as (data: string | Buffer, mediaType: string) => void;
+
   try {
     if (this.page && this.context) {
-      await stopAndAttachTrace(this.context, this.attach.bind(this), scenarioName);
+      await stopAndAttachTrace(this.context, attachFn, scenarioName);
 
       await this.page.close(); // ✅ MUST close before accessing video
-      await attachVideo(this.page, this.attach.bind(this), scenarioName);
+      await attachVideo(this.page, attachFn, scenarioName);
 
       await this.context.close();
     }

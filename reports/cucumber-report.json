@@ -6,7 +6,7 @@
         "description": "",
         "id": "ecp-canvas-prints-regression;canvas-prints-category-regression",
         "keyword": "Scenario",
-        "line": 3,
+        "line": 4,
         "name": "Canvas Prints category regression",
         "steps": [
           {
@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 723944999
+              "duration": 1279919500
             },
             "embeddings": [
               {
@@ -34,53 +34,53 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
+            "line": 6,
             "name": "the user launches live 'ECP'",
             "match": {
-              "location": "src\\steps\\CanvasPrints.step.ts:6"
+              "location": "src\\steps\\CanvasPrints.step.ts:5"
             },
             "result": {
               "status": "passed",
-              "duration": 6957183899
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 6,
-            "name": "the user hovers over the Canvas category in the top navigation",
-            "match": {
-              "location": "src\\steps\\CanvasPrints.step.ts:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 108115798
+              "duration": 3058220899
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 7,
-            "name": "the user clicks on the Canvas Prints sub-category under the Canvas Prints category",
+            "name": "the user hovers over the Canvas category in the top navigation",
             "match": {
-              "location": "src\\steps\\CanvasPrints.step.ts:31"
+              "location": "src\\steps\\CanvasPrints.step.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 740108400
+              "duration": 110060599
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 8,
-            "name": "the user selects 'Size 8x8' from the pricing grid",
+            "name": "the user clicks on the Canvas Prints sub-category under the Canvas Prints category",
             "match": {
-              "location": "src\\steps\\CanvasPrints.step.ts:43"
+              "location": "src\\steps\\CanvasPrints.step.ts:30"
             },
             "result": {
               "status": "passed",
-              "duration": 336098798
+              "duration": 784779899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user selects 'Size 8x8' from the pricing grid",
+            "match": {
+              "location": "src\\steps\\CanvasPrints.step.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 352727498
             }
           },
           {
@@ -88,19 +88,29 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 408109000
+              "duration": 492701699
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       }
     ],
     "id": "ecp-canvas-prints-regression",
-    "line": 1,
+    "line": 2,
     "keyword": "Feature",
     "name": "ECP Canvas Prints Regression",
-    "tags": [],
+    "tags": [
+      {
+        "name": "@regression",
+        "line": 1
+      }
+    ],
     "uri": "features\\CanvasPrints.feature"
   }
 ]

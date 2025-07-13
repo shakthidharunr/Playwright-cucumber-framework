@@ -1,3 +1,4 @@
+@regression
 Feature: ECP Canvas Prints Regression
 
         Scenario: Canvas Prints category regression
