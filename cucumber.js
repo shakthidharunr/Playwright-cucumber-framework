@@ -1,21 +1,30 @@
+// cucumber.js
+
 module.exports = {
-  defaultTimeout: 60000, // 60 seconds
   default: {
+    timeout: 60000, // Scenario timeout (in milliseconds)
+
+    requireModule: ['ts-node/register'], // To allow Cucumber to run TypeScript files directly
     require: [
-      'src/steps/**/*.ts',
-      'src/support/**/*.ts'
+      'src/steps/**/*.ts', // Path to your step definition files
+      'src/support/hook.ts', // Corrected to hook.ts based on your error output (was hooks.ts in previous example)
+      'src/support/CustomWorld.ts', // Make sure your CustomWorld is also required
     ],
-    paths: ['features/**/*.feature'],
-    requireModule: ['ts-node/register'],
+    paths: ['features/**/*.feature'], // Path to your feature files
+
     format: [
-      'cucumberjs-allure2-reporter',
-      'json:reports/cucumber-report.json',
-      'progress'
+      'summary', // Basic summary in console
+      'progress', // Shows progress in console
+      'json:reports/cucumber-report.json', // Generates a JSON report
+      'allure-cucumberjs/reporter', // <-- THIS SHOULD BE JUST THE STRING NAME OF THE REPORTER
     ],
+    // This is where you put the options for your formatters
     formatOptions: {
-      'cucumberjs-allure2-reporter': {
-        resultDir: 'allure-results'
-      }
-    }
-  }
+      'allure-cucumberjs/reporter': {
+        resultsDir: 'allure-results', // Correctly specify the results directory here
+      },
+    },
+
+    publishQuiet: true, // Suppress the default Cucumber.js public report URL
+  },
 };
