@@ -10,25 +10,25 @@ pipeline {
   stages {
     stage('Checkout Code') {
       steps {
-        git 'https://github.com/shakthidharunr/Playwright-cucumber-framework.git'
+        git branch: 'main', url: 'https://github.com/shakthidharunr/Playwright-cucumber-framework.git'
       }
     }
 
     stage('Install Dependencies') {
       steps {
-        sh 'npm ci'
+        bat 'npm ci'
       }
     }
 
     stage('Run Tests') {
       steps {
-        sh 'npm run test:local'
+        bat 'npm run test:local'
       }
     }
 
     stage('Generate Allure Report') {
       steps {
-        sh 'npm run report:allure'
+        bat 'npm run report:allure'
       }
     }
   }
