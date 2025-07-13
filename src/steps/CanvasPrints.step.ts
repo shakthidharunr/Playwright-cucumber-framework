@@ -3,7 +3,7 @@ import { sites } from '../config';
 import { logger } from '../utils/logger';
 
 
-Given('the user launches live {string}', { timeout: 10000 }, async function (site: string) {
+Given('the user launches live {string}', { timeout: 90000 }, async function (site: string) {
   const url = sites[site.toLowerCase() as keyof typeof sites];
   if (!url) {
     logger.error(`Unknown site key: ${site}`);

@@ -1,4 +1,5 @@
 module.exports = {
+  defaultTimeout: 60000, // 60 seconds
   default: {
     require: [
       'src/steps/**/*.ts',

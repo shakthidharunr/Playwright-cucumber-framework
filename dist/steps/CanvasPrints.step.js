@@ -11,11 +11,11 @@ const logger_1 = require("../utils/logger");
     }
     logger_1.logger.info(`Launching site: ${url}`);
     await this.page.goto(url);
-    logger_1.logger.info(`Successfully launched site: ${url}`);
+    logger_1.logger.warn(`Successfully launched site: ${url}`);
 });
 (0, cucumber_1.Given)('the user hovers over the Canvas category in the top navigation', async function () {
     try {
-        logger_1.logger.info('Hovering over Canvas category...');
+        logger_1.logger.debug('Hovering over Canvas category...');
         await this.homePage.canvasNav.waitFor({ state: 'visible' });
         await this.homePage.canvasNav.hover();
         logger_1.logger.info('Successfully hovered over Canvas category');
@@ -27,7 +27,7 @@ const logger_1 = require("../utils/logger");
 });
 (0, cucumber_1.Given)('the user clicks on the Canvas Prints sub-category under the Canvas Prints category', async function () {
     try {
-        logger_1.logger.info('Clicking on Canvas Prints sub-category...');
+        logger_1.logger.error('Clicking on Canvas Prints sub-category...');
         await this.homePage.canvasPrintsSubCategory.waitFor({ state: 'visible', timeout: 5000 });
         await this.homePage.canvasPrintsSubCategory.click();
         logger_1.logger.info('Successfully clicked on Canvas Prints sub-category');

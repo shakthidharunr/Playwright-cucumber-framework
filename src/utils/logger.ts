@@ -17,7 +17,7 @@ const baseLogger = pino({
 
 export const logger = {
   info: (msg: string) =>
-    baseLogger.info(chalk.cyan(`${msg}`)),
+    baseLogger.info(chalk.green(`${msg}`)),
 
   warn: (msg: string) =>
     baseLogger.warn(chalk.yellow(`${msg}`)),

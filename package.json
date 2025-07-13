@@ -6,15 +6,14 @@
   "scripts": {
     "test": "cucumber-js",
     "clean": "find ./src -type f \\( -name '*.js' -o -name '*.js.map' \\) -delete",
-    "test:local": "cross-env RUN_ENV=local npx cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/hook.ts features",
+     "test:local": "cross-env ENABLE_TRACE=false ENABLE_VIDEO=false RUN_ENV=local npx cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/hook.ts features",
     "test:bs": "cross-env RUN_ENV=bs npx browserstack-node-sdk cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/hook.ts features",
     "postinstall": "npm update browserstack-node-sdk",
     "test-browserstack": "browserstack-node-sdk cucumber-js",
     "test:local-browserstack": "cross-env RUN_ENV=local npx browserstack-node-sdk cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/hook.ts features",
     "report:allure": "npx allure generate allure-results --clean -o allure-report && npx allure open allure-report",
     "report:html1": "ts-node generate-html-report.ts",
-    "report:html2": "ts-node generate-multiple-html-report.ts",
-    "open:html2": "start reports/html/index.html"
+    "report:html2": "ts-node generate-multiple-html-report.ts"
   },
   "keywords": [],
   "author": "",

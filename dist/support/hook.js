@@ -34,34 +34,62 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const cucumber_1 = require("@cucumber/cucumber");
-const playwright_1 = require("playwright");
+const dotenv = __importStar(require("dotenv"));
 const DesignerPage_1 = require("../pages/DesignerPage");
 const Homepage_1 = require("../pages/Homepage");
-const dotenv = __importStar(require("dotenv"));
+const envHelper_1 = require("./helpers/envHelper");
+const browserHelper_1 = require("./helpers/browserHelper");
+const artifactHelper_1 = require("./helpers/artifactHelper");
+const logger_1 = require("utils/logger");
+require("../support/customWorld");
 dotenv.config();
 class CustomWorld extends cucumber_1.World {
     browser;
+    context;
     page;
     homePage;
     designerpage;
 }
 (0, cucumber_1.setWorldConstructor)(CustomWorld);
+(0, cucumber_1.BeforeAll)(envHelper_1.writeAllureEnvironmentInfo);
 (0, cucumber_1.Before)(async function () {
-    if (process.env.RUN_ENV === 'bs') {
-        // BrowserStack SDK will inject page automatically
+    logger_1.logger.info('Starting test setup...');
+    const browserName = process.env.BROWSER_NAME || 'chromium';
+    const runEnv = process.env.RUN_ENV || 'local';
+    const os = process.platform;
+    this.attach(`Browser: ${browserName}`, 'text/plain');
+    this.attach(`RunEnv: ${runEnv}`, 'text/plain');
+    this.attach(`OS: ${process.platform}`, 'text/plain');
+    // For console
+    logger_1.logger.info(`🔍 Metadata → Browser: ${browserName}, Env: ${runEnv}, OS: ${os}`);
+    if (runEnv === 'bs') {
         this.page = global.page;
     }
     else {
-        this.browser = await playwright_1.chromium.launch({ headless: false });
-        this.page = await this.browser.newPage();
+        const { browser, context, page } = await (0, browserHelper_1.launchBrowserWithContext)();
+        this.browser = browser;
+        this.context = context;
+        this.page = page;
     }
-    // Shared for both local and BS
     this.homePage = new Homepage_1.HomePage(this.page);
     this.designerpage = new DesignerPage_1.DesignerPage(this.page);
+    logger_1.logger.info('Initialized browser and page');
 });
-(0, cucumber_1.After)(async function () {
-    if (this.page)
+(0, cucumber_1.AfterStep)(async function ({ pickle, result }) {
+    if (result?.status === 'FAILED' && this.page) {
+        const buffer = await (0, artifactHelper_1.attachFailureScreenshot)(this.page, pickle.name);
+        this.attach(buffer, 'image/png');
+    }
+});
+(0, cucumber_1.After)(async function ({ pickle }) {
+    const scenarioName = pickle.name;
+    if (this.page && this.context) {
+        await (0, artifactHelper_1.stopAndAttachTrace)(this.context, this.attach.bind(this), scenarioName);
+        await (0, artifactHelper_1.attachVideo)(this.page, this.attach.bind(this), scenarioName);
         await this.page.close();
-    if (this.browser)
+        await this.context.close();
+    }
+    if (this.browser) {
         await this.browser.close();
+    }
 });

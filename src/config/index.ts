@@ -1,4 +1,4 @@
 
 export const sites = {
-  ecp: 'https://www.uat.easycanvasprints.com/',
+  ecp: 'https://www.easycanvasprints.com/',
 };

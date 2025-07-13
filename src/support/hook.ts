@@ -1,93 +1,84 @@
-import { After, AfterStep, Before, setWorldConstructor, World } from '@cucumber/cucumber';
+import { After, AfterStep, Before, BeforeAll, setWorldConstructor, World } from '@cucumber/cucumber';
 import * as dotenv from 'dotenv';
-import fs from 'fs';
-import path from 'path';
-import { Browser, Page } from 'playwright';
+import { Browser, Page, BrowserContext } from 'playwright';
 import { DesignerPage } from '../pages/DesignerPage';
 import { HomePage } from '../pages/Homepage';
-import BrowserManager from '../utils/BrowserManager'; // ✅ new import;
+
+import { writeAllureEnvironmentInfo } from './helpers/envHelper';
+import { launchBrowserWithContext } from './helpers/browserHelper';
+import { attachFailureScreenshot, stopAndAttachTrace, attachVideo } from './helpers/artifactHelper';
+import { logger } from '../utils/logger';
+
 
 dotenv.config();
 
+
 class CustomWorld extends World {
   browser!: Browser;
+  context!: BrowserContext;
   page!: Page;
-  homePage!: HomePage;
-  designerpage!: DesignerPage;
 }
-
 setWorldConstructor(CustomWorld);
 
-Before(async function (scenario) {
+BeforeAll({ timeout: 10 * 1000 }, writeAllureEnvironmentInfo);
+
+Before({ timeout: 20 * 1000 }, async function () {
+    logger.info('Starting test setup...');
   const browserName = process.env.BROWSER_NAME || 'chromium';
   const runEnv = process.env.RUN_ENV || 'local';
+  const os = process.platform;
+
 
   this.attach(`Browser: ${browserName}`, 'text/plain');
   this.attach(`RunEnv: ${runEnv}`, 'text/plain');
+  this.attach(`OS: ${process.platform}`, 'text/plain');
+
+  // For console
+  logger.info(`Metadata - Browser: ${browserName}, Env: ${runEnv}, OS: ${os}`);
 
   if (runEnv === 'bs') {
     this.page = (global as any).page;
   } else {
-    this.browser = await BrowserManager.getBrowser();
-
-    const context = await this.browser.newContext({
-      recordVideo: {
-        dir: 'reports/videos', // 👈 video output directory
-        size: { width: 1280, height: 720 },
-      },
-    });
-
-    await context.tracing.start({
-      screenshots: true,
-      snapshots: true,
-      sources: true,
-    });
-
-    const page = await context.newPage();
+    const { browser, context, page } = await launchBrowserWithContext();
+    this.browser = browser;
     this.context = context;
     this.page = page;
   }
 
   this.homePage = new HomePage(this.page);
   this.designerpage = new DesignerPage(this.page);
+
+   logger.info('Initialized browser and page');
 });
 
-
-AfterStep(async function ({ result }) {
+AfterStep(async function ({ pickle, result }) {
   if (result?.status === 'FAILED' && this.page) {
-    const screenshotPath = path.join('reports/screenshots', `FAILED_${Date.now()}.png`);
-    const buffer = await this.page.screenshot({ path: screenshotPath, fullPage: true });
-
-    if (!fs.existsSync('reports/screenshots')) {
-      fs.mkdirSync('reports/screenshots', { recursive: true });
-    }
-
-    this.attach(buffer, 'image/png'); // For Allure (optional)
+    const buffer = await attachFailureScreenshot(this.page, pickle.name);
+    this.attach(buffer, 'image/png');
   }
 });
 
-After(async function (scenario) {
-  if (this.page && this.context) {
-    const tracePath = `reports/traces/trace-${Date.now()}.zip`;
-    await this.context.tracing.stop({ path: tracePath });
+After(async function ({ pickle }) {
+  const scenarioName = pickle.name;
 
-    // ✅ Attach trace to Allure
-    if (fs.existsSync(tracePath)) {
-      this.attach(fs.readFileSync(tracePath), 'application/zip');
+  try {
+    if (this.page && this.context) {
+      await stopAndAttachTrace(this.context, this.attach.bind(this), scenarioName);
+
+      await this.page.close(); // ✅ MUST close before accessing video
+      await attachVideo(this.page, this.attach.bind(this), scenarioName);
+
+      await this.context.close();
     }
-
-    // ✅ Attach video
-    const videoPath = await this.page.video()?.path();
-    if (videoPath && fs.existsSync(videoPath)) {
-      const videoBuffer = fs.readFileSync(videoPath);
-      this.attach(videoBuffer, 'video/webm');
+  } catch (err: any) {
+    logger.error(`Error in After hook for '${scenarioName}': ${err.message}`);
+  } finally {
+    if (this.browser) {
+      try {
+        await this.browser.close();
+      } catch (e: any) {
+        logger.error(`Failed to close browser: ${e.message}`);
+      }
     }
-
-    await this.page.close();
-    await this.context.close();
-  }
-
-  if (this.browser) {
-    await this.browser.close();
   }
 });
