@@ -12,13 +12,13 @@ Given('the user launches live {string}', { timeout: 10000 }, async function (sit
 
   logger.info(`Launching site: ${url}`);
   await this.page.goto(url);
-  logger.info(`Successfully launched site: ${url}`);
+  logger.warn(`Successfully launched site: ${url}`);
 });
 
 
 Given('the user hovers over the Canvas category in the top navigation', async function () {
   try {
-    logger.info('Hovering over Canvas category...');
+    logger.debug('Hovering over Canvas category...');
     await this.homePage.canvasNav.waitFor({ state: 'visible' });
     await this.homePage.canvasNav.hover();
     logger.info('Successfully hovered over Canvas category');
@@ -30,7 +30,7 @@ Given('the user hovers over the Canvas category in the top navigation', async fu
 
 Given('the user clicks on the Canvas Prints sub-category under the Canvas Prints category', async function () {
   try {
-    logger.info('Clicking on Canvas Prints sub-category...');
+    logger.error('Clicking on Canvas Prints sub-category...');
     await this.homePage.canvasPrintsSubCategory.waitFor({ state: 'visible', timeout: 5000 });
     await this.homePage.canvasPrintsSubCategory.click();
     logger.info('Successfully clicked on Canvas Prints sub-category');

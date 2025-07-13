@@ -12,7 +12,20 @@ export class CustomWorld extends World {
 
   async initBrowser() {
     const browser = await BrowserManager.getBrowser();
-    this.context = await browser.newContext();
+
+    this.context = await browser.newContext({
+      recordVideo: {
+        dir: 'reports/videos', // ✅ videos saved here
+        size: { width: 1280, height: 720 },
+      },
+    });
+
+    await this.context.tracing.start({
+      screenshots: true,
+      snapshots: true,
+      sources: true,
+    });
+
     this.page = await this.context.newPage();
   }
 }
