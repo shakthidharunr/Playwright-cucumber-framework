@@ -14,6 +14,13 @@ pipeline {
       }
     }
 
+     stage('Check Node & npm Versions') {
+      steps {
+        bat 'node -v'
+        bat 'npm -v'
+      }
+    }
+
 stage('Install Dependencies') {
   steps {
     bat 'npm install'
