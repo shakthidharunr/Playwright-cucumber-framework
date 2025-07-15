@@ -4,22 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    
     "test": "npm run cucumber",
-
-    
-    "cucumber": "npx cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/hook.ts features",
-    "test:regression": "npx cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/hook.ts --tags '@regression' features",
-
-    
+    "cucumber": "npx cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/hook.ts --format progress features",
+    "test:regression": "npx cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/hook.ts --tags \"@regression\" --format progress features",
     "test:allure": "cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/hook.ts --format allure-cucumberjs --format json:reports/cucumber-report.json --format progress --format-options \"{ \\\"allure-cucumberjs\\\": { \\\"resultDir\\\": \\\"allure-results\\\" } }\" features",
     "report:allure": "npx allure generate allure-results --clean -o allure-report && npx allure open allure-report",
-
-    
     "report:html:single": "ts-node generate-html-report.ts",
     "report:html:multi": "ts-node generate-multiple-html-report.ts"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
